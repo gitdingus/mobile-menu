@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/gitdingus/mobile-menu/issues"
   },
-  "homepage": "https://github.com/gitdingus/mobile-menu#readme"
+  "homepage": "https://github.com/gitdingus/mobile-menu#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
 }
