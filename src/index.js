@@ -28,6 +28,9 @@ function createMobileNav(menus) {
   const navWrapper = createHtmlElement({
     tag: 'div',
     classes: ['nav-wrapper'],
+    properties: {
+      style: `width: calc(100vw * ${menus.length});`,
+    },
   });
 
   menus.forEach((item) => {
