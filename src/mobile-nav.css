@@ -5,15 +5,15 @@ body {
 .mobile-nav{
   width: 100vw;
   overflow-x: hidden;
-
-  /* remove for production */
-  border: 1px solid black;
 }
+
 .mobile-nav *{
+  /* sizing */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 
+  /* behavior */
   touch-action: none;
 }
 
