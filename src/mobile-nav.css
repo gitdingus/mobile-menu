@@ -1,5 +1,6 @@
 .mobile-nav{
   width: 100vw;
+  overflow-x: hidden;
 }
 .mobile-nav *{
   padding: 0;
