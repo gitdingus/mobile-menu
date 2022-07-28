@@ -1,4 +1,5 @@
 import { createHtmlElement } from 'dom-utils';
+import './mobile-nav.css';
 /*
   createMobileNav builds a nav bar based on passed menus object.
   object should have the form:
