@@ -1,0 +1,19 @@
+{
+  "name": "mobile-menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitdingus/mobile-menu.git"
+  },
+  "author": "J.S.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitdingus/mobile-menu/issues"
+  },
+  "homepage": "https://github.com/gitdingus/mobile-menu#readme"
+}
