@@ -1,7 +1,11 @@
+.mobile-nav{
+  width: 100vw;
+}
 .mobile-nav *{
   padding: 0;
   margin: 0;
 }
+
 .mobile-nav a,
 .mobile-nav a:active,
 .mobile-nav a:focus,
@@ -12,4 +16,14 @@
 
 .mobile-nav ul{
   list-style: none;
+}
+
+.mobile-nav .nav-wrapper {
+  /* width is set in javascript */
+
+  display: flex;
+  text-align: center;
+}
+.mobile-nav .nav-wrapper .menu-item{
+  width: 100vw;
 }
