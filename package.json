@@ -29,6 +29,8 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
-    "dom-utils": "github:gitdingus/dom-utils"
+    "dom-utils": "github:gitdingus/dom-utils",
+    "event-emitter": "github:gitdingus/event-emitter",
+    "swipe-detection": "github:gitdingus/swipe-detection"
   }
 }
