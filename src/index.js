@@ -136,16 +136,6 @@ const nav = createMobileNav([
   },
 ]);
 
-const message = createHtmlElement({
-  tag: 'h1',
-  classes: ['message'],
-  properties: {
-    textContent: 'Hello!',
-  },
-});
-
-document.querySelector('.content').appendChild(message);
-
 const navWrapper = nav.querySelector('.nav-wrapper');
 let swipes = 0;
 
@@ -154,7 +144,6 @@ function swipeLeft() {
     return;
   }
   swipes += 1;
-  message.textContent = 'Swiped left' + swipes;
   navWrapper.style.transform = `translateX(calc(${-swipes} * 100vw))`;
 }
 
@@ -163,7 +152,6 @@ function swipeRight() {
     return;
   }
   swipes -= 1;
-  message.textContent = 'Swiped right' + swipes;
   navWrapper.style.transform = `translateX(calc(${-swipes} * 100vw))`;
 }
 
