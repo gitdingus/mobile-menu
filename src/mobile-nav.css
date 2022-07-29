@@ -39,6 +39,8 @@ body {
 
   display: flex;
   text-align: center;
+
+  transition: transform 300ms ease-in-out;
 }
 .mobile-nav .nav-wrapper .menu-item{
   width: 100vw;
