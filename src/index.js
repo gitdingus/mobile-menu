@@ -129,6 +129,11 @@ const nav = createMobileNav([
     menuLink: '#',
     links: testLinks,
   },
+  {
+    menuTitle: 'contact',
+    menuLink: '#',
+    links: testLinks,
+  },
 ]);
 
 const message = createHtmlElement({
