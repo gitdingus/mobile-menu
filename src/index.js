@@ -172,6 +172,10 @@ function swipeDetected(direction) {
     swipeLeft();
   } else if (direction === 'right') {
     swipeRight();
+  } else if (direction === 'down') {
+    navWrapper.querySelectorAll('.menu-links')[swipes].classList.add('expanded');
+  } else if (direction === 'up') {
+    navWrapper.querySelectorAll('.menu-links')[swipes].classList.remove('expanded');
   }
 }
 
