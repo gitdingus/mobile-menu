@@ -118,7 +118,7 @@ const testLinks = [
   },
 ];
 
-createMobileNav([
+const nav = createMobileNav([
   {
     menuTitle: 'home',
     menuLink: '#',
@@ -131,8 +131,37 @@ createMobileNav([
   },
 ]);
 
+const message = createHtmlElement({
+  tag: 'h1',
+  classes: ['message'],
+  properties: {
+    textContent: 'Hello!',
+  },
+});
+
+document.querySelector('.content').appendChild(message);
+
+const navWrapper = nav.querySelector('.nav-wrapper');
+let swipes = 0;
+
+function swipeLeft() {
+  swipes += 1;
+  message.textContent = 'Swiped left' + swipes;
+  navWrapper.style.transform = `translateX(calc(${-swipes} * 100vw))`;
+}
+
+function swipeRight() {
+  swipes -= 1;
+  message.textContent = 'Swiped right' + swipes;
+  navWrapper.style.transform = `translateX(calc(${-swipes} * 100vw))`;
+}
+
 function swipeDetected(direction) {
-  console.log(direction);
+  if (direction === 'left') {
+    swipeLeft();
+  } else if (direction === 'right') {
+    swipeRight();
+  }
 }
 
 EventEmitter.addEvent('navSwiped', swipeDetected);
