@@ -150,12 +150,18 @@ const navWrapper = nav.querySelector('.nav-wrapper');
 let swipes = 0;
 
 function swipeLeft() {
+  if (swipes === navWrapper.childElementCount - 1) {
+    return;
+  }
   swipes += 1;
   message.textContent = 'Swiped left' + swipes;
   navWrapper.style.transform = `translateX(calc(${-swipes} * 100vw))`;
 }
 
 function swipeRight() {
+  if (swipes === 0) {
+    return;
+  }
   swipes -= 1;
   message.textContent = 'Swiped right' + swipes;
   navWrapper.style.transform = `translateX(calc(${-swipes} * 100vw))`;
