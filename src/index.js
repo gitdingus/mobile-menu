@@ -1,4 +1,6 @@
 import { createHtmlElement } from 'dom-utils';
+import { EventEmitter } from 'event-emitter';
+import detectSwipe from 'swipe-detection';
 import './mobile-nav.css';
 /*
   createMobileNav builds a nav bar based on passed menus object.
@@ -88,6 +90,11 @@ function createMobileNav(menus) {
   });
 
   mobileNav.appendChild(navWrapper);
+
+  const callback = function getSwipeDirection(direction) {
+    EventEmitter.raiseEvent('navSwiped', direction);
+  };
+  detectSwipe(mobileNav, callback);
 }
 
 const testLinks = [
@@ -121,3 +128,9 @@ createMobileNav([
     links: testLinks,
   },
 ]);
+
+function swipeDetected(direction) {
+  console.log(direction);
+}
+
+EventEmitter.addEvent('navSwiped', swipeDetected);
