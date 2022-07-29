@@ -15,6 +15,7 @@ body {
 
   /* behavior */
   touch-action: none;
+  pointer-events: none;
 }
 
 .mobile-nav a,
