@@ -23,7 +23,7 @@ import './mobile-nav.css';
 
 function createMobileNav(menus) {
   if (menus === undefined) {
-    return;
+    return undefined;
   }
 
   const mobileNav = document.querySelector('.mobile-nav');
@@ -95,6 +95,8 @@ function createMobileNav(menus) {
     EventEmitter.raiseEvent('navSwiped', direction);
   };
   detectSwipe(mobileNav, callback);
+
+  return mobileNav;
 }
 
 const testLinks = [
