@@ -5,6 +5,9 @@ body {
 .mobile-nav{
   width: 100vw;
   overflow-x: hidden;
+
+  /* disable touch actions to stop interference with pointer events */
+  touch-action: none;
 }
 
 .mobile-nav *{
@@ -14,6 +17,7 @@ body {
   box-sizing: border-box;
 
   /* behavior */
+  /* disable so children elements don't interfere with pointer event listeners */
   touch-action: none;
   pointer-events: none;
 }
